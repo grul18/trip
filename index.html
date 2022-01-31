@@ -7,6 +7,7 @@
     <link href="./assets/css/normalize.css" rel="stylesheet">
     <link href="./assets/css/global.css" rel="stylesheet">
     <link href="./assets/css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
     <title>Go trip</title>
 </head>
 <body>
@@ -43,7 +44,7 @@
                 <a href="#" class="registration_link">
                     Sign up
                 </a>
-                <a href="#" class="registration_link">       
+                <a href="#" class="registration_link active">       
                     Login
                 </a>
             </div>
@@ -64,38 +65,37 @@
                 </a>
             </div>
         </section>
-        <!-- <section>
-            <div>
-                <h2>
-                    Choice Of Destinations
-                </h2>
-                <p>
-                    explore the beauty of god's earth in a beautiful forest and have fun
-                </p>
-                <a href="#">
-                    Exsplore Now
-                </a>
-            </div>
-            <div>
-                <div>
-                    <div>
-                        <img src="./assets/img/slide2.png " width="335" height="402" alt="слайд 2">
-                    </div>
-                    <div>
-                        <img src="./assets/img/slide1.png " width="380" height="456" alt="слайд 1">
-                    </div>
-                    <div>
-                        <img src="./assets/img/slide2.png " width="335" height="402" alt="слайд 2">
+
+        <section class="destinations">
+            <div class="container">
+                <div class="destinations_description">
+                    <h2 class="destinations_title">
+                        Choice Of <span>Destinations</span>
+                    </h2>
+                    <p class="destinations_text">
+                        explore the beauty of god's earth in a beautiful forest and have fun
+                    </p>
+                    <a href="#" class="destinations_link">
+                        Exsplore Now
+                    </a>
+                </div>
+
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide"><img src="./assets/img/slide2.png " width="380" height="456" alt="слайд 2"></div>
+                      <div class="swiper-slide"><img src="./assets/img/slide1.png " width="380" height="456" alt="слайд 1"></div>
+                      <div class="swiper-slide"><img src="./assets/img/slide2.png " width="380" height="456" alt="слайд 2"></div>
+                      <div class="swiper-slide"><img src="./assets/img/slide2.png " width="380" height="456" alt="слайд 2"></div>
+                      <div class="swiper-slide"><img src="./assets/img/slide1.png " width="380" height="456" alt="слайд 1"></div>
+                      <div class="swiper-slide"><img src="./assets/img/slide2.png " width="380" height="456" alt="слайд 2"></div>
                     </div>
                 </div>
-                <button type="button"> 
-                    <img src="./assets/img/arrow.svg" width="11" height="14" alt="стелка">
-                </button>
             </div>
-        </section>-->
+        </section>
+
         <section class="review">
             <div class="container review_container">
-                <img src="./assets/img/girl.png" width="478" height="537" alt="девушка с картой">
+                <img src="./assets/img/girl.png" width="478" height="537" alt="девушка с картой" class="review_img">
                 <div class="review_right">
                     <h2 class="review_title">
                         What do customers say about us?
@@ -198,11 +198,20 @@
                 <a href="#" class="registration_link">
                     Sign up
                 </a>
-                <a href="#" class="registration_link">
+                <a href="#" class="registration_link active">
                     Login
                 </a>
             </div>
         </div>
-    </footer>   
+    </footer>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+            slidesPerView: 2,
+            spaceBetween: 30,
+        });
+    </script>
 </body>
 </html>
